@@ -125,14 +125,19 @@ $(document).ready(function() {
 $(document).on('click', '#book_pdf', function(e){
   e.preventDefault();
   $('.modal-overaly').addClass('open');
+	
+	window.frames[0].frameElement.contentWindow.CreateBookView();
 
-  var iFrameTest = document.getElementById('book_iframe'); 
-  iFrameTest.contentWindow.CreateBookView();
+//   var iFrameTest = document.getElementById('book_iframe'); 
+//   iFrameTest.contentWindow.CreateBookView();
 
-  $('.close').on('click', function(){
-    $(this).closest('.modal-overaly').removeClass('open');
-  })
+//   $('.close').on('click', function(){
+//     $(this).closest('.modal-overaly').removeClass('open');
+//   })
 
+});
+$(document).on('click', '.close', function(e){
+	 $(this).closest('.modal-overaly').removeClass('open');
 });
 
 // $(document).on($.modal.OPEN, function(){
