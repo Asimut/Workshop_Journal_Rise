@@ -12,14 +12,16 @@ window.CreateBookView = function() {
 	// Getting values from LocalStorage
 	for ( var i=0; i<localStorage.length; ++i ) {
 
-		if(i==0){
+		// if(i==0){
 		
-			var retrieved = localStorage.getItem( localStorage.key(i) );
+			// var retrieved = localStorage.getItem( localStorage.key(i) );
+			var retrieved = localStorage.getItem( 'LearningJournal_' );
+			
 			
 			console.log(retrieved);
 
 			UserData.Sections = JSON.parse(retrieved);
-		}
+		// }
 		
 	}
 

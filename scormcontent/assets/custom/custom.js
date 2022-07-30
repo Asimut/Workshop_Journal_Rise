@@ -222,7 +222,8 @@ $(document).on('change', '.journalentry-select-two select', function(){
 function setlocalStorageItem() {
   var loc = document.location;
   var uniqueURL = loc.origin + loc.pathname.substring(0, loc.pathname.lastIndexOf("/"));
-  localStorageItem = localStorageItem_prefix + encodeURIComponent(uniqueURL);
+  // localStorageItem = localStorageItem_prefix + encodeURIComponent(uniqueURL);
+  localStorageItem = localStorageItem_prefix;
 }
 
 
